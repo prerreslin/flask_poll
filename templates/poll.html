@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.question }}</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+    <h1>{{ data.question }}</h1>
+    <form action="/poll">
+        {% for e in data.fields %}
+            <input type="radio" id="option-{{ loop.index }}" name="field" value="{{ e }}">
+            <label for="option-{{ loop.index }}">{{ e }}</label><br>
+        {% endfor %}
+        <input type="submit" value="Проголосувати" />
+    </form>
+</body>
+</html>

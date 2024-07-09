@@ -1,0 +1,11 @@
+body {
+    background-image: url("imgs/pizza.jpg");
+}
+
+h1{
+    position: absolute;
+    right: 50px;
+    top: 40%;
+    background-color: white;
+    font-size: 50px;
+}
